@@ -168,6 +168,7 @@ const resultScreen = document.getElementById("result-screen");
 
 const startButton = document.getElementById("start-btn");
 const restartButton = document.getElementById("restart-btn");
+const shareButton = document.getElementById("share-btn");
 
 const questionNumber = document.getElementById("question-number");
 const questionText = document.getElementById("question");
@@ -177,6 +178,7 @@ const progressBar = document.getElementById("progress-bar");
 
 startButton.addEventListener("click", startQuiz);
 restartButton.addEventListener("click", restartQuiz);
+shareButton.addEventListener("click", shareResult);
 
 
 function startQuiz() {
@@ -314,4 +316,43 @@ function restartQuiz() {
     resultScreen.classList.add("hidden");
     startScreen.classList.remove("hidden");
 
+} async function shareResult() {
+
+    const title = document.getElementById("result-title").textContent;
+    const survival = document.getElementById("survival-time").textContent;
+    const finalScore = document.getElementById("final-score").textContent;
+
+    const shareText =
+        `🧟 I scored ${finalScore}/60 on the Zombie Apocalypse Survival Test!\n\n` +
+        `${title}\n` +
+        `Estimated survival: ${survival}\n\n` +
+        `How long would YOU survive?`;
+
+    const shareData = {
+        title: "Zombie Apocalypse Survival Test",
+        text: shareText,
+        url: "https://jughead4247.github.io/zombie-quiz/"
+    };
+
+    try {
+
+        if (navigator.share) {
+
+            await navigator.share(shareData);
+
+        } else {
+
+            await navigator.clipboard.writeText(
+                shareText + "\n\nhttps://jughead4247.github.io/zombie-quiz/"
+            );
+
+            alert("Your result has been copied! You can paste it anywhere.");
+
+        }
+
+    } catch (error) {
+
+        console.log("Sharing cancelled.");
+
+    }
 }
