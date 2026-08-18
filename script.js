@@ -180,7 +180,6 @@ const progressBar = document.getElementById("progress-bar");
 startButton.addEventListener("click", startQuiz);
 restartButton.addEventListener("click", restartQuiz);
 shareButton.addEventListener("click", shareResult);
-challengeButton.addEventListener("click", challengeFriend);
 
 
 function startQuiz() {
