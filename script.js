@@ -268,6 +268,7 @@ function showResult() {
             "You probably wouldn't make it very far. Your biggest enemy isn't necessarily the zombies — it's your decision-making.";
         survival = "Hours to a few days";
         icon = "☠️";
+        challengeButton.addEventListener("click", challengeFriend);
 
     } else if (score <= 30) {
 
