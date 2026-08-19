@@ -168,21 +168,40 @@ button {
 }
 
 #start-btn,
-#restart-btn {
+#restart-btn,
+#share-btn,
+#challenge-btn {
     width: 100%;
+    margin-top: 10px;
 
     background: #b51f1f;
-
     color: white;
 }
 
 #start-btn:hover,
-#restart-btn:hover {
+#restart-btn:hover,
+#share-btn:hover,
+#challenge-btn:hover {
     background: #d32929;
-
     transform: translateY(-2px);
 }
+#challenge-btn {
+    background: #3a3a3a;
+    border: 1px solid #555;
+}
 
+#challenge-btn:hover {
+    background: #4a4a4a;
+}
+
+#share-btn {
+    background: #222;
+    border: 1px solid #444;
+}
+
+#share-btn:hover {
+    background: #303030;
+}
 
 /* QUIZ */
 
@@ -361,9 +380,17 @@ h2 {
     .subtitle {
         font-size: 16px;
     }
+     .quiz-header {
+    font-size: 11px;
+}
 
+h2 {
+    margin-top: 28px;
+    font-size: 23px;
+}
     .answer {
-        padding: 17px;
+        padding: 17px 15px;
+        font-size: 15px
     }
 
 }
