@@ -293,6 +293,10 @@ function showQuestion() {
 
 function selectAnswer(points) {
 
+    if (points === 4) points = 5;
+    else if (points === 3) points = 2;
+    else if (points === 2) points = 1;
+
     score += points;
 
     currentQuestion++;
