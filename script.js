@@ -322,7 +322,7 @@ function showResult() {
     let icon;
 
 
-    if (score <= 15) {
+    if (score <= 20) {
 
         title = "☠️ Zombie Food";
         description =
@@ -330,7 +330,7 @@ function showResult() {
         survival = "Hours to a few days";
         icon = "☠️";
 
-    } else if (score <= 30) {
+    } else if (score <= 45) {
 
         title = "🧟 Short-Term Survivor";
         description =
@@ -338,7 +338,7 @@ function showResult() {
         survival = "Several days to a few weeks";
         icon = "🧟";
 
-    } else if (score <= 45) {
+    } else if (score <= 65) {
 
         title = "🏃 Survivor";
         description =
@@ -346,7 +346,7 @@ function showResult() {
         survival = "Several weeks to a few months";
         icon = "🏃";
 
-    } else if (score <= 55) {
+    } else if (score <= 90) {
 
         title = "🔥 Apocalypse Survivor";
         description =
