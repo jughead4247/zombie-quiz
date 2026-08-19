@@ -1,157 +1,231 @@
 const questions = [
+    // DAY 1 — THE OUTBREAK
 
     {
-        question: "The outbreak has just begun. You hear screaming outside. What do you do?",
+        question: "Day 1: The outbreak has just begun. You hear screaming outside. What do you do?",
         answers: [
-            ["Run outside to see what's happening", 0],
-            ["Secure the house, gather supplies and plan an escape route", 4],
-            ["Look through the window", 1],
-            ["Lock everything and assess the situation", 3]
-            
+            ["Look outside to understand what is happening", 2],
+            ["Lock the doors, gather essentials and plan your next move", 4],
+            ["Leave immediately before the streets become crowded", 3],
+            ["Go outside to help whoever is screaming", 0]
         ]
     },
 
     {
-        question: "You have 10 minutes to leave your house. What do you take?",
+        question: "Day 1: You have ten minutes before you need to leave. What is most important?",
         answers: [
-            ["Carefully chosen survival essentials and as much water as possible", 4],
-            ["Whatever is closest", 0],
-            ["Phone, wallet and some food", 1],
-            ["Water, food, medicine and basic equipment", 3]
-            
+            ["Food, water and a few useful tools", 3],
+            ["Take valuables in case money becomes useful later", 1],
+            ["Water, medicine, food and something to carry everything", 4],
+            ["Grab whatever can fit in your backpack", 2]
         ]
     },
 
     {
-        question: "You encounter someone who appears injured and asks for help.",
+        question: "Day 1: You reach a road filled with abandoned vehicles. What do you do?",
         answers: [
-            ["Immediately run to them", 0],
-            ["Help them without asking questions", 1],
-            ["Stay protected and determine whether they're actually safe before approaching", 4],
-            ["Keep your distance and assess them first", 3]
-            
+            ["Walk through the vehicles looking for supplies", 2],
+            ["Take the first vehicle that looks usable", 1],
+            ["Move around the area and find the least exposed route", 4],
+            ["Stay on the road because it is the fastest route", 3]
+        ]
+    },
+
+
+    // DAY 2 — ON THE MOVE
+
+    {
+        question: "Day 2: Your group needs water. You find a stream outside the town.",
+        answers: [
+            ["Drink from it after checking that it looks clean", 1],
+            ["Fill containers and treat the water before drinking", 4],
+            ["Take only enough for today", 2],
+            ["Search for bottled water instead", 3]
         ]
     },
 
     {
-        question: "Your group wants to enter a supermarket for supplies.",
+        question: "Day 2: You spot a small pharmacy that appears abandoned.",
         answers: [
-            ["Scout the building first", 3],
-            ["Assess entrances, exits and surroundings before deciding", 4],
-            ["Rush in before someone else gets there", 0],
-            ["Go in with the group", 1]
-            
+            ["Enter quickly before someone else arrives", 1],
+            ["Ignore it and keep moving", 2],
+            ["Observe the building and surroundings before entering", 4],
+            ["Send one person inside while everyone waits outside", 3]
         ]
     },
 
     {
-        question: "Your vehicle runs out of fuel in an unfamiliar area.",
+        question: "Day 2: You hear several zombies nearby but they haven't noticed you.",
         answers: [
-            ["Panic", 0],
-            ["Check the surroundings, secure supplies and choose the safest route", 4],
-            ["Abandon everything and start walking", 1],
-            ["Take essential supplies and continue on foot", 3]
+            ["Stay quiet and take a longer route around them", 4],
+            ["Run before they get any closer", 1],
+            ["Wait until they move away", 3],
+            ["Try to distract them and pass through", 2]
+        ]
+    },
+
+
+    // DAY 3 — SHELTER
+
+    {
+        question: "Day 3: Your group finds an apparently abandoned house.",
+        answers: [
+            ["Check the main rooms quickly", 2],
+            ["Search the house thoroughly for supplies", 3],
+            ["Observe it from outside and check entrances before going in", 4],
+            ["Enter immediately because night is approaching", 1]
         ]
     },
 
     {
-        question: "Someone in your group is bitten.",
+        question: "Day 3: You have secured the house. What should you do next?",
         answers: [
-            ["Pretend nothing happened", 0],
-            ["Isolate them immediately and make a difficult decision", 4],
-            ["Let them stay with everyone", 1],
-            ["Separate them and figure out what happened", 3]
-            
+            ["Rest while everyone is still feeling strong", 2],
+            ["Organize supplies and establish watches", 4],
+            ["Search the neighborhood for more food", 3],
+            ["Barricade every door and stay inside", 3]
         ]
     },
 
     {
-        question: "Your food supply is running low.",
+        question: "Day 3: Someone in your group has a deep wound.",
         answers: [
-            ["Start rationing", 3],
-            ["Ration immediately and establish a sustainable source of food and water", 4],
-            ["Keep eating normally", 0],
-            ["Wait until it's almost gone", 1]
+            ["Clean and treat the wound using available supplies", 4],
+            ["Tell them to rest and see if it improves", 2],
+            ["Use whatever medicine you can find", 3],
+            ["Ignore it unless it becomes serious", 0]
+        ]
+    },
+
+
+    // DAY 4 — PEOPLE
+
+    {
+        question: "Day 4: A stranger approaches your shelter asking for food.",
+        answers: [
+            ["Give them food immediately", 1],
+            ["Tell them to leave", 2],
+            ["Speak from a safe position and assess the situation first", 4],
+            ["Invite them inside to hear their story", 2]
         ]
     },
 
     {
-        question: "You find an apparently abandoned house.",
+        question: "Day 4: Another survivor offers to trade useful supplies.",
         answers: [
-            ["Walk straight inside", 0],
-            ["Check the building carefully", 3],
-            ["Check the main entrance", 1],
-            ["Observe it from outside first and check entrances and exits", 4]
+            ["Trade carefully without revealing everything you have", 4],
+            ["Trust them if they seem friendly", 1],
+            ["Trade whatever they ask for", 0],
+            ["Refuse all contact with outsiders", 2]
         ]
     },
 
     {
-        question: "You hear someone screaming for help nearby.",
+        question: "Day 4: Two members of your group strongly disagree about where to go.",
         answers: [
-            ["Assume it could be a trap and investigate from a protected position", 4],
-            ["Run toward them", 0],
-            ["Shout back to them", 1],
-            ["Observe the area before approaching", 3]
+            ["Let the group vote on everything", 2],
+            ["Choose the route yourself without discussion", 1],
+            ["Hear both sides and make a decision based on risk", 4],
+            ["Follow whoever has the most experience", 3]
+        ]
+    },
+
+
+    // DAY 5 — RESOURCES
+
+    {
+        question: "Day 5: Your food supply is running low.",
+        answers: [
+            ["Reduce portions and start looking for a sustainable source", 4],
+            ["Keep eating normally until the food is gone", 0],
+            ["Send everyone out searching for food", 2],
+            ["Save most of the food for emergencies", 3]
         ]
     },
 
     {
-        question: "Your group has discovered a safe location. What is your priority?",
+        question: "Day 5: Heavy rain has made the roads dangerous.",
         answers: [
-            ["Find food", 1],
-            ["Secure the entrances", 3],
-            ["Make yourself comfortable", 0],
-            ["Establish security, water, food storage, escape routes and watch rotations", 4]
+            ["Continue because stopping wastes time", 1],
+            ["Wait for conditions to improve while protecting supplies", 4],
+            ["Find a shortcut through unfamiliar terrain", 2],
+            ["Split the group so some can continue ahead", 0]
         ]
     },
 
     {
-        question: "Another group offers to trade supplies with you.",
+        question: "Day 5: You discover a large amount of canned food, but carrying everything will slow you down.",
         answers: [
-            ["Keep your distance, verify their intentions and never reveal how much you have", 4],
-            ["Give them everything they want", 0],
-            ["Trust them because they seem friendly", 1],
-            ["Trade carefully", 3]
+            ["Take everything and deal with the weight later", 2],
+            ["Take only what can be carried comfortably", 3],
+            ["Prioritize high-value supplies while keeping the group mobile", 4],
+            ["Leave it because stopping is too risky", 1]
+        ]
+    },
+
+
+    // DAY 6 — ESCALATION
+
+    {
+        question: "Day 6: You discover that the zombies have become faster than before.",
+        answers: [
+            ["Keep using the same survival strategy", 0],
+            ["Avoid populated areas and change your plans", 4],
+            ["Travel only during daylight", 3],
+            ["Move faster and take more risks", 1]
         ]
     },
 
     {
-        question: "Winter is approaching.",
+        question: "Day 6: Your vehicle breaks down far from your destination.",
         answers: [
-            ["Deal with it when it arrives", 0],
-            ["Find some blankets", 1],
-            ["Prepare shelter, heating, clothing, food and backup plans", 4],
-            ["Stockpile fuel, food and warm clothing", 3]
+            ["Stay with the vehicle and hope someone finds you", 1],
+            ["Take essential supplies and plan the safest route on foot", 4],
+            ["Walk directly toward the nearest town", 2],
+            ["Spend the day trying to repair it", 3]
         ]
     },
 
     {
-        question: "Your group is arguing about what to do next.",
+        question: "Day 6: Your group discovers that another large group is approaching your location.",
         answers: [
-            ["Pick a side and start fighting", 0],
-            ["Let everyone do whatever they want", 1],
-            ["Try to reach an agreement", 3],
-            ["Establish clear leadership, listen to everyone and make a decision", 4]
+            ["Hide and observe before deciding what to do", 4],
+            ["Confront them immediately", 0],
+            ["Leave everything behind and run", 1],
+            ["Approach them openly and ask what they want", 2]
+        ]
+    },
+
+
+    // DAY 7 — THE ENDGAME
+
+    {
+        question: "Day 7: You finally reach a settlement claiming to be safe.",
+        answers: [
+            ["Enter immediately because safety is more important", 1],
+            ["Stay outside and observe the settlement first", 4],
+            ["Ask the guards about their rules and resources", 3],
+            ["Leave because no settlement can be trusted", 2]
         ]
     },
 
     {
-        question: "You discover that the zombies are becoming faster and more dangerous.",
+        question: "Day 7: The settlement offers you a permanent place to stay. What matters most before accepting?",
         answers: [
-            ["Keep doing what you've been doing", 0],
-            ["Hope they don't find you", 1],
-            ["Change your plans and become more cautious", 3],
-            ["Completely reassess your survival strategy", 4]
+            ["How comfortable the accommodation is", 1],
+            ["How much food they provide", 2],
+            ["Their security, leadership, resources and rules", 4],
+            ["Whether other survivors seem friendly", 3]
         ]
     },
 
     {
-        question: "You finally find a functioning settlement offering safety.",
+        question: "Day 7: You survived the first week. What is your biggest priority now?",
         answers: [
-            ["Investigate its leadership, security, resources and rules first", 4],
-            ["Walk straight through the gates", 0],
-            ["Join immediately", 1],
-            ["Observe the settlement before joining", 3]
+            ["Find a better weapon", 2],
+            ["Rest and stop worrying about the future", 1],
+            ["Build a sustainable supply of food, water, shelter and security", 4],
+            ["Travel farther away from the outbreak", 3]
         ]
     }
 
