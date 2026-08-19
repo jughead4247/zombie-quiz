@@ -264,7 +264,7 @@ function showQuestion() {
 
     questionNumber.textContent =
     `Question ${currentQuestion + 1} of ${questions.length}`;
-
+     questionText.textContent = current.question;
     answersContainer.innerHTML = "";
 
     const progress =
