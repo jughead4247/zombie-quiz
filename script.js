@@ -233,6 +233,7 @@ const resultScreen = document.getElementById("result-screen");
 const startButton = document.getElementById("start-btn");
 const restartButton = document.getElementById("restart-btn");
 const shareButton = document.getElementById("share-btn");
+const challengeButton = document.getElementById("challenge-btn");
 
 const questionNumber = document.getElementById("question-number");
 const questionText = document.getElementById("question");
@@ -243,7 +244,7 @@ const progressBar = document.getElementById("progress-bar");
 startButton.addEventListener("click", startQuiz);
 restartButton.addEventListener("click", restartQuiz);
 shareButton.addEventListener("click", shareResult);
-
+challengeButton.addEventListener("click", shareResult);
 
 function startQuiz() {
 
