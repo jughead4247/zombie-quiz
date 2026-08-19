@@ -338,7 +338,7 @@ function showResult() {
         survival = "Several days to a few weeks";
         icon = "🧟";
 
-    } else if (score <= 65) {
+    } else if (score <= 70) {
 
         title = "🏃 Survivor";
         description =
