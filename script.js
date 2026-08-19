@@ -385,7 +385,7 @@ function restartQuiz() {
     const finalScore = document.getElementById("final-score").textContent;
 
     const shareText =
-        `🧟 I scored ${finalScore}/60 on the Zombie Apocalypse Survival Test!\n\n` +
+        `🧟 I scored ${finalScore}/100 on the Zombie Apocalypse Survival Test!\n\n` +
         `${title}\n` +
         `Estimated survival: ${survival}\n\n` +
         `How long would YOU survive?`;
