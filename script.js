@@ -78,16 +78,6 @@ const questions = [
     },
 
     {
-        question: "Day 3: You have secured the house. What should you do next?",
-        answers: [
-            ["Rest while everyone is still feeling strong", 2],
-            ["Organize supplies and establish watches", 4],
-            ["Search the neighborhood for more food", 3],
-            ["Barricade every door and stay inside", 3]
-        ]
-    },
-
-    {
         question: "Day 3: Someone in your group has a deep wound.",
         answers: [
             ["Clean and treat the wound using available supplies", 4],
