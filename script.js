@@ -272,11 +272,8 @@ function showQuestion() {
 
     const current = questions[currentQuestion];
 
-    const day = Math.floor(currentQuestion / 3) + 1;
-const questionInDay = (currentQuestion % 3) + 1;
-
-questionNumber.textContent =
-    `Day ${day} • Question ${questionInDay} of 3`;
+    questionNumber.textContent =
+    `Question ${currentQuestion + 1} of ${questions.length}`;
 
     answersContainer.innerHTML = "";
 
