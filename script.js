@@ -4,9 +4,9 @@ const questions = [
     {
         question: "Day 1: The outbreak has just begun. You hear screaming outside. What do you do?",
         answers: [
-            ["Look outside to understand what is happening", 2],
-            ["Lock the doors, gather essentials and plan your next move", 4],
-            ["Leave immediately before the streets become crowded", 3],
+            ["Look outside to understand what is happening", 1],
+            ["Lock the doors, gather essentials and plan your next move", 5],
+            ["Leave immediately before the streets become crowded", 2],
             ["Go outside to help whoever is screaming", 0]
         ]
     },
@@ -14,20 +14,20 @@ const questions = [
     {
         question: "Day 1: You have ten minutes before you need to leave. What is most important?",
         answers: [
-            ["Food, water and a few useful tools", 3],
-            ["Take valuables in case money becomes useful later", 1],
-            ["Water, medicine, food and something to carry everything", 4],
-            ["Grab whatever can fit in your backpack", 2]
+            ["Food, water and a few useful tools", 2],
+            ["Take valuables in case money becomes useful later", 0],
+            ["Water, medicine, food and something to carry everything", 5],
+            ["Grab whatever can fit in your backpack", 1]
         ]
     },
 
     {
         question: "Day 1: You reach a road filled with abandoned vehicles. What do you do?",
         answers: [
-            ["Walk through the vehicles looking for supplies", 2],
-            ["Take the first vehicle that looks usable", 1],
-            ["Move around the area and find the least exposed route", 4],
-            ["Stay on the road because it is the fastest route", 3]
+            ["Walk through the vehicles looking for supplies", 1],
+            ["Take the first vehicle that looks usable", 2],
+            ["Move around the area and find the least exposed route", 5],
+            ["Stay on the road because it is the fastest route", 0]
         ]
     },
 
@@ -37,10 +37,10 @@ const questions = [
     {
         question: "Day 2: Your group needs water. You find a stream outside the town.",
         answers: [
-            ["Drink from it after checking that it looks clean", 1],
-            ["Fill containers and treat the water before drinking", 4],
-            ["Take only enough for today", 2],
-            ["Search for bottled water instead", 3]
+            ["Drink from it after checking that it looks clean", 0],
+            ["Fill containers and treat the water before drinking", 5],
+            ["Take only enough for today", 1],
+            ["Search for bottled water instead", 2]
         ]
     },
 
@@ -48,19 +48,19 @@ const questions = [
         question: "Day 2: You spot a small pharmacy that appears abandoned.",
         answers: [
             ["Enter quickly before someone else arrives", 1],
-            ["Ignore it and keep moving", 2],
-            ["Observe the building and surroundings before entering", 4],
-            ["Send one person inside while everyone waits outside", 3]
+            ["Ignore it and keep moving", 0],
+            ["Observe the building and surroundings before entering", 5],
+            ["Send one person inside while everyone waits outside", 2]
         ]
     },
 
     {
         question: "Day 2: You hear several zombies nearby but they haven't noticed you.",
         answers: [
-            ["Stay quiet and take a longer route around them", 4],
+            ["Stay quiet and take a longer route around them", 5],
             ["Run before they get any closer", 1],
-            ["Wait until they move away", 3],
-            ["Try to distract them and pass through", 2]
+            ["Wait until they move away", 2],
+            ["Try to distract them and pass through", 0]
         ]
     },
 
@@ -71,18 +71,18 @@ const questions = [
         question: "Day 3: Your group finds an apparently abandoned house.",
         answers: [
             ["Check the main rooms quickly", 2],
-            ["Search the house thoroughly for supplies", 3],
-            ["Observe it from outside and check entrances before going in", 4],
-            ["Enter immediately because night is approaching", 1]
+            ["Search the house thoroughly for supplies", 1],
+            ["Observe it from outside and check entrances before going in", 5],
+            ["Enter immediately because night is approaching", 0]
         ]
     },
 
     {
         question: "Day 3: Someone in your group has a deep wound.",
         answers: [
-            ["Clean and treat the wound using available supplies", 4],
-            ["Tell them to rest and see if it improves", 2],
-            ["Use whatever medicine you can find", 3],
+            ["Clean and treat the wound using available supplies", 5],
+            ["Tell them to rest and see if it improves", 1],
+            ["Use whatever medicine you can find", 2],
             ["Ignore it unless it becomes serious", 0]
         ]
     },
@@ -95,15 +95,15 @@ const questions = [
         answers: [
             ["Give them food immediately", 1],
             ["Tell them to leave", 2],
-            ["Speak from a safe position and assess the situation first", 4],
-            ["Invite them inside to hear their story", 2]
+            ["Speak from a safe position and assess the situation first", 5],
+            ["Invite them inside to hear their story", 0]
         ]
     },
 
     {
         question: "Day 4: Another survivor offers to trade useful supplies.",
         answers: [
-            ["Trade carefully without revealing everything you have", 4],
+            ["Trade carefully without revealing everything you have", 5],
             ["Trust them if they seem friendly", 1],
             ["Trade whatever they ask for", 0],
             ["Refuse all contact with outsiders", 2]
@@ -115,8 +115,8 @@ const questions = [
         answers: [
             ["Let the group vote on everything", 2],
             ["Choose the route yourself without discussion", 1],
-            ["Hear both sides and make a decision based on risk", 4],
-            ["Follow whoever has the most experience", 3]
+            ["Hear both sides and make a decision based on risk", 5],
+            ["Follow whoever has the most experience", 0]
         ]
     },
 
@@ -126,30 +126,30 @@ const questions = [
     {
         question: "Day 5: Your food supply is running low.",
         answers: [
-            ["Reduce portions and start looking for a sustainable source", 4],
+            ["Reduce portions and start looking for a sustainable source", 5],
             ["Keep eating normally until the food is gone", 0],
             ["Send everyone out searching for food", 2],
-            ["Save most of the food for emergencies", 3]
+            ["Save most of the food for emergencies", 1]
         ]
     },
 
     {
         question: "Day 5: Heavy rain has made the roads dangerous.",
         answers: [
-            ["Continue because stopping wastes time", 1],
-            ["Wait for conditions to improve while protecting supplies", 4],
+            ["Continue because stopping wastes time", 0],
+            ["Wait for conditions to improve while protecting supplies", 5],
             ["Find a shortcut through unfamiliar terrain", 2],
-            ["Split the group so some can continue ahead", 0]
+            ["Split the group so some can continue ahead", 1]
         ]
     },
 
     {
         question: "Day 5: You discover a large amount of canned food, but carrying everything will slow you down.",
         answers: [
-            ["Take everything and deal with the weight later", 2],
-            ["Take only what can be carried comfortably", 3],
-            ["Prioritize high-value supplies while keeping the group mobile", 4],
-            ["Leave it because stopping is too risky", 1]
+            ["Take everything and deal with the weight later", 1],
+            ["Take only what can be carried comfortably", 2],
+            ["Prioritize high-value supplies while keeping the group mobile", 5],
+            ["Leave it because stopping is too risky", 0]
         ]
     },
 
@@ -160,8 +160,8 @@ const questions = [
         question: "Day 6: You discover that the zombies have become faster than before.",
         answers: [
             ["Keep using the same survival strategy", 0],
-            ["Avoid populated areas and change your plans", 4],
-            ["Travel only during daylight", 3],
+            ["Avoid populated areas and change your plans", 5],
+            ["Travel only during daylight", 2],
             ["Move faster and take more risks", 1]
         ]
     },
@@ -170,16 +170,16 @@ const questions = [
         question: "Day 6: Your vehicle breaks down far from your destination.",
         answers: [
             ["Stay with the vehicle and hope someone finds you", 1],
-            ["Take essential supplies and plan the safest route on foot", 4],
+            ["Take essential supplies and plan the safest route on foot", 5],
             ["Walk directly toward the nearest town", 2],
-            ["Spend the day trying to repair it", 3]
+            ["Spend the day trying to repair it", 0]
         ]
     },
 
     {
         question: "Day 6: Your group discovers that another large group is approaching your location.",
         answers: [
-            ["Hide and observe before deciding what to do", 4],
+            ["Hide and observe before deciding what to do", 5],
             ["Confront them immediately", 0],
             ["Leave everything behind and run", 1],
             ["Approach them openly and ask what they want", 2]
@@ -193,19 +193,19 @@ const questions = [
         question: "Day 7: You finally reach a settlement claiming to be safe.",
         answers: [
             ["Enter immediately because safety is more important", 1],
-            ["Stay outside and observe the settlement first", 4],
-            ["Ask the guards about their rules and resources", 3],
-            ["Leave because no settlement can be trusted", 2]
+            ["Stay outside and observe the settlement first", 5],
+            ["Ask the guards about their rules and resources", 2],
+            ["Leave because no settlement can be trusted", 0]
         ]
     },
 
     {
         question: "Day 7: The settlement offers you a permanent place to stay. What matters most before accepting?",
         answers: [
-            ["How comfortable the accommodation is", 1],
+            ["How comfortable the accommodation is", 0],
             ["How much food they provide", 2],
-            ["Their security, leadership, resources and rules", 4],
-            ["Whether other survivors seem friendly", 3]
+            ["Their security, leadership, resources and rules", 5],
+            ["Whether other survivors seem friendly", 1]
         ]
     },
 
@@ -213,9 +213,9 @@ const questions = [
         question: "Day 7: You survived the first week. What is your biggest priority now?",
         answers: [
             ["Find a better weapon", 2],
-            ["Rest and stop worrying about the future", 1],
-            ["Build a sustainable supply of food, water, shelter and security", 4],
-            ["Travel farther away from the outbreak", 3]
+            ["Rest and stop worrying about the future", 0],
+            ["Build a sustainable supply of food, water, shelter and security", 5],
+            ["Travel farther away from the outbreak", 1]
         ]
     }
 
@@ -292,10 +292,6 @@ function showQuestion() {
 
 
 function selectAnswer(points) {
-
-    if (points === 4) points = 5;
-    else if (points === 3) points = 2;
-    else if (points === 2) points = 1;
 
     score += points;
 
