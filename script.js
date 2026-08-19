@@ -391,3 +391,8 @@ function restartQuiz() {
     }
 }
 }
+document.addEventListener("click", function(event) {
+    if (event.target && event.target.id === "challenge-btn") {
+        challengeFriend();
+    }
+});
