@@ -418,3 +418,34 @@ h2 {
     text-decoration: underline;
 }
 }
+/* INFORMATION PAGES */
+
+.info-page {
+    max-width: 760px;
+    margin: 40px auto;
+}
+
+.info-page h1 {
+    text-align: center;
+}
+
+.info-page h2 {
+    margin-top: 35px;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.info-page p {
+    color: #bbb;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.info-page a {
+    color: #d32929;
+    text-decoration: none;
+}
+
+.info-page a:hover {
+    text-decoration: underline;
+}
