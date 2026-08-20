@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jughead4247.github.io/zombie-quiz/sitemap.xml
