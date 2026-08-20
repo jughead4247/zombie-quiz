@@ -1,3 +1,4 @@
+const homeInfo = document.getElementById("home-info");
 const questions = [
     // DAY 1 — THE OUTBREAK
 
@@ -247,7 +248,7 @@ shareButton.addEventListener("click", shareResult);
 challengeButton.addEventListener("click", shareResult);
 
 function startQuiz() {
-
+     homeInfo.classList.add("hidden");
     currentQuestion = 0;
     score = 0;
 
@@ -311,7 +312,7 @@ function selectAnswer(points) {
 
 
 function showResult() {
-
+    homeInfo.classList.remove("hidden");
     quizScreen.classList.add("hidden");
     resultScreen.classList.remove("hidden");
 
