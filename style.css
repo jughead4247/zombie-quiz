@@ -392,5 +392,29 @@ h2 {
         padding: 17px 15px;
         font-size: 15px
     }
+    .site-footer {
+    width: 100%;
+    max-width: 760px;
 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-top: 20px;
+    padding: 10px;
+
+    font-size: 12px;
+}
+
+.site-footer a {
+    color: #777;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
 }
