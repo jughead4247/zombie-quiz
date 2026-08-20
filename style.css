@@ -483,3 +483,13 @@ h2 {
     font-size: 15px;
     line-height: 1.7;
 }
+.home-info h3 {
+    margin-top: 28px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.home-info h3:first-of-type {
+    margin-top: 20px;
+}
