@@ -450,3 +450,16 @@ h2 {
 .info-page a:hover {
     text-decoration: underline;
 }
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.copyright {
+    margin-top: 12px;
+    text-align: center;
+    color: #555;
+    font-size: 11px;
+}
