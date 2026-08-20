@@ -463,3 +463,23 @@ h2 {
     color: #555;
     font-size: 11px;
 }
+/* HOMEPAGE INFORMATION */
+
+.home-info {
+    margin-top: 30px;
+    padding: 30px;
+    background: rgba(12, 12, 12, 0.96);
+    border: 1px solid #3a3a3a;
+    border-radius: 18px;
+}
+
+.home-info h2 {
+    margin-top: 0;
+    font-size: 26px;
+}
+
+.home-info p {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.7;
+}
