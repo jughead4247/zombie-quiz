@@ -168,7 +168,7 @@ const questions = [
     },
 
     {
-        question: ": Your vehicle breaks down far from your destination.",
+        question: " Your vehicle breaks down far from your destination.",
         answers: [
             ["Stay with the vehicle and hope someone finds you", 1],
             ["Take essential supplies and plan the safest route on foot", 5],
