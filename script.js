@@ -377,10 +377,19 @@ function showResult() {
 
 function restartQuiz() {
 
+    currentQuestion = 0;
+    survivalScore = 0;
+    moralityScore = 0;
+
     resultScreen.classList.add("hidden");
+
     startScreen.classList.remove("hidden");
 
-} async function shareResult() {
+    homeInfo.classList.remove("hidden");
+
+    progressBar.style.width = "0%";
+}
+async function shareResult() {
 
     const title = document.getElementById("result-title").textContent;
     const survival = document.getElementById("survival-time").textContent;
