@@ -218,10 +218,39 @@ const questions = [
             ["Build a sustainable supply of food, water, shelter and security", 5],
             ["Travel farther away from the outbreak", 1]
         ]
-    }
+       }
 
 ];
 
+// ===============================
+// SCORE CHECK
+// ===============================
+
+const maxSurvivalScore = questions.reduce((total, question) => {
+    return total + Math.max(
+        ...question.answers.map(answer => answer[1])
+    );
+}, 0);
+
+const maxMoralityScore = questions.reduce((total, question) => {
+    const moralityValues = question.answers
+        .map(answer => answer[2])
+        .filter(value => value !== null && value !== undefined);
+
+    return total + (
+        moralityValues.length > 0
+            ? Math.max(...moralityValues)
+            : 0
+    );
+}, 0);
+
+console.log("Total questions:", questions.length);
+console.log("Maximum survival score:", maxSurvivalScore);
+console.log("Maximum morality score:", maxMoralityScore);
+
+// ===============================
+// QUIZ STATE
+// ===============================
 
 let currentQuestion = 0;
 let score = 0;
@@ -248,12 +277,18 @@ shareButton.addEventListener("click", shareResult);
 challengeButton.addEventListener("click", shareResult);
 
 function startQuiz() {
-     homeInfo.classList.add("hidden");
+
+    homeInfo.classList.add("hidden");
+
     currentQuestion = 0;
-    score = 0;
+    survivalScore = 0;
+    moralityScore = 0;
+
+    answersContainer.dataset.locked = "false";
 
     startScreen.classList.add("hidden");
     resultScreen.classList.add("hidden");
+
     quizScreen.classList.remove("hidden");
 
     showQuestion();
@@ -261,6 +296,11 @@ function startQuiz() {
 
 
 function showQuestion() {
+
+    if (currentQuestion >= questions.length) {
+        showResult();
+        return;
+    }
 
     const current = questions[currentQuestion];
 
@@ -277,15 +317,18 @@ function showQuestion() {
 
     current.answers.forEach((answer) => {
 
-        const button = document.createElement("button");
+    const button = document.createElement("button");
 
-        button.className = "answer";
+    button.className = "answer";
+    button.textContent = answer[0];
 
-        button.textContent = answer[0];
+    button.addEventListener("click", function () {
+        selectAnswer(answer[1], answer[2]);
+    });
 
-        button.addEventListener("click", () => {
-            selectAnswer(answer[1]);
-        });
+    answersContainer.appendChild(button);
+
+});
 
         answersContainer.appendChild(button);
 
@@ -293,14 +336,25 @@ function showQuestion() {
 }
 
 
-function selectAnswer(points) {
+function selectAnswer(survivalPoints, moralityPoints) {
 
-    score += points;
+    if (answersContainer.dataset.locked === "true") {
+        return;
+    }
+
+    answersContainer.dataset.locked = "true";
+
+    survivalScore += survivalPoints;
+
+    if (moralityPoints !== null && moralityPoints !== undefined) {
+        moralityScore += moralityPoints;
+    }
 
     currentQuestion++;
 
     if (currentQuestion < questions.length) {
 
+        answersContainer.dataset.locked = "false";
         showQuestion();
 
     } else {
@@ -309,7 +363,6 @@ function selectAnswer(points) {
 
     }
 }
-
 
 function showResult() {
     homeInfo.classList.remove("hidden");
