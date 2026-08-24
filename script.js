@@ -329,10 +329,6 @@ function showQuestion() {
     answersContainer.appendChild(button);
 
 });
-
-        answersContainer.appendChild(button);
-
-    });
 }
 
 
