@@ -168,7 +168,7 @@ const questions = [
     },
 
     {
-        question: " Your vehicle breaks down far from your destination.",
+        question: ": Your vehicle breaks down far from your destination.",
         answers: [
             ["Stay with the vehicle and hope someone finds you", 1],
             ["Take essential supplies and plan the safest route on foot", 5],
@@ -218,39 +218,10 @@ const questions = [
             ["Build a sustainable supply of food, water, shelter and security", 5],
             ["Travel farther away from the outbreak", 1]
         ]
-       }
+    }
 
 ];
 
-// ===============================
-// SCORE CHECK
-// ===============================
-
-const maxSurvivalScore = questions.reduce((total, question) => {
-    return total + Math.max(
-        ...question.answers.map(answer => answer[1])
-    );
-}, 0);
-
-const maxMoralityScore = questions.reduce((total, question) => {
-    const moralityValues = question.answers
-        .map(answer => answer[2])
-        .filter(value => value !== null && value !== undefined);
-
-    return total + (
-        moralityValues.length > 0
-            ? Math.max(...moralityValues)
-            : 0
-    );
-}, 0);
-
-console.log("Total questions:", questions.length);
-console.log("Maximum survival score:", maxSurvivalScore);
-console.log("Maximum morality score:", maxMoralityScore);
-
-// ===============================
-// QUIZ STATE
-// ===============================
 
 let currentQuestion = 0;
 let score = 0;
@@ -277,18 +248,12 @@ shareButton.addEventListener("click", shareResult);
 challengeButton.addEventListener("click", shareResult);
 
 function startQuiz() {
-
-    homeInfo.classList.add("hidden");
-
+     homeInfo.classList.add("hidden");
     currentQuestion = 0;
-    survivalScore = 0;
-    moralityScore = 0;
-
-    answersContainer.dataset.locked = "false";
+    score = 0;
 
     startScreen.classList.add("hidden");
     resultScreen.classList.add("hidden");
-
     quizScreen.classList.remove("hidden");
 
     showQuestion();
@@ -296,11 +261,6 @@ function startQuiz() {
 
 
 function showQuestion() {
-
-    if (currentQuestion >= questions.length) {
-        showResult();
-        return;
-    }
 
     const current = questions[currentQuestion];
 
@@ -317,40 +277,30 @@ function showQuestion() {
 
     current.answers.forEach((answer) => {
 
-    const button = document.createElement("button");
+        const button = document.createElement("button");
 
-    button.className = "answer";
-    button.textContent = answer[0];
+        button.className = "answer";
 
-    button.addEventListener("click", function () {
-        selectAnswer(answer[1], answer[2]);
+        button.textContent = answer[0];
+
+        button.addEventListener("click", () => {
+            selectAnswer(answer[1]);
+        });
+
+        answersContainer.appendChild(button);
+
     });
-
-    answersContainer.appendChild(button);
-
-});
 }
 
 
-function selectAnswer(survivalPoints, moralityPoints) {
+function selectAnswer(points) {
 
-    if (answersContainer.dataset.locked === "true") {
-        return;
-    }
-
-    answersContainer.dataset.locked = "true";
-
-    survivalScore += survivalPoints;
-
-    if (moralityPoints !== null && moralityPoints !== undefined) {
-        moralityScore += moralityPoints;
-    }
+    score += points;
 
     currentQuestion++;
 
     if (currentQuestion < questions.length) {
 
-        answersContainer.dataset.locked = "false";
         showQuestion();
 
     } else {
@@ -359,6 +309,7 @@ function selectAnswer(survivalPoints, moralityPoints) {
 
     }
 }
+
 
 function showResult() {
     homeInfo.classList.remove("hidden");
@@ -426,19 +377,10 @@ function showResult() {
 
 function restartQuiz() {
 
-    currentQuestion = 0;
-    survivalScore = 0;
-    moralityScore = 0;
-
     resultScreen.classList.add("hidden");
-
     startScreen.classList.remove("hidden");
 
-    homeInfo.classList.remove("hidden");
-
-    progressBar.style.width = "0%";
-}
-async function shareResult() {
+} async function shareResult() {
 
     const title = document.getElementById("result-title").textContent;
     const survival = document.getElementById("survival-time").textContent;
