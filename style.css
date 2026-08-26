@@ -63,15 +63,7 @@ body::before {
 .screen {
     background: rgba(12, 12, 12, 0.96);
 
-    .quiz-start-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 auto 25px;
-    border-radius: 12px;
-}
-
-    border: 1px solid #3a3a3a;
+        border: 1px solid #3a3a3a;
 
     border-radius: 18px;
 
@@ -99,7 +91,38 @@ body::before {
         transform: translateY(0);
     }
 }
+/* START CARD */
 
+.intro-card {
+    background: rgba(12, 12, 12, 0.96);
+
+    border: 1px solid #3a3a3a;
+
+    border-radius: 18px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.8),
+        0 0 0 1px rgba(255,255,255,0.02);
+
+    animation: appear 0.4s ease;
+}
+
+
+/* START IMAGE */
+
+.quiz-start-image {
+    display: block;
+
+    width: 100%;
+    max-width: 670px;
+    height: auto;
+
+    margin: 0 auto 25px;
+
+    border-radius: 12px;
+}
 
 /* START SCREEN */
 
