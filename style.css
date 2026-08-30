@@ -63,7 +63,7 @@ body::before {
 .screen {
     background: rgba(12, 12, 12, 0.96);
 
-        border: 1px solid #3a3a3a;
+    border: 1px solid #3a3a3a;
 
     border-radius: 18px;
 
@@ -77,10 +77,11 @@ body::before {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 @keyframes appear {
+
     from {
         opacity: 0;
         transform: translateY(12px);
@@ -90,7 +91,10 @@ body::before {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
+
+
 /* START CARD */
 
 .intro-card {
@@ -123,6 +127,7 @@ body::before {
 
     border-radius: 12px;
 }
+
 
 /* START SCREEN */
 
@@ -178,6 +183,7 @@ h1 {
     letter-spacing: 1px;
 }
 
+
 button {
     border: none;
 
@@ -196,48 +202,69 @@ button {
     transition:
         transform 0.15s,
         background 0.15s,
-        border-color 0.15s;
+        border-color 0.15s,
+        opacity 0.15s;
 }
+
 
 #start-btn,
 #restart-btn,
 #share-btn,
 #challenge-btn {
+
     width: 100%;
+
     margin-top: 10px;
 
     background: #b51f1f;
+
     color: white;
 }
+
 
 #start-btn:hover,
 #restart-btn:hover,
 #share-btn:hover,
 #challenge-btn:hover {
+
     background: #d32929;
+
     transform: translateY(-2px);
 }
+
+
 #challenge-btn {
+
     background: #3a3a3a;
+
     border: 1px solid #555;
 }
 
+
 #challenge-btn:hover {
+
     background: #4a4a4a;
 }
 
+
 #share-btn {
+
     background: #222;
+
     border: 1px solid #444;
 }
 
+
 #share-btn:hover {
+
     background: #303030;
 }
+
 
 /* QUIZ */
 
 .quiz-header {
+
     display: flex;
 
     justify-content: space-between;
@@ -253,7 +280,9 @@ button {
     letter-spacing: 1px;
 }
 
+
 .progress {
+
     height: 6px;
 
     background: #292929;
@@ -265,7 +294,9 @@ button {
     overflow: hidden;
 }
 
+
 #progress-bar {
+
     height: 100%;
 
     width: 0%;
@@ -275,7 +306,9 @@ button {
     transition: width 0.3s ease;
 }
 
+
 h2 {
+
     font-size: clamp(22px, 5vw, 31px);
 
     line-height: 1.4;
@@ -283,7 +316,9 @@ h2 {
     margin: 35px 0 25px;
 }
 
+
 .answer {
+
     display: block;
 
     width: 100%;
@@ -305,7 +340,9 @@ h2 {
     line-height: 1.45;
 }
 
+
 .answer:hover {
+
     background: #242424;
 
     border-color: #666;
@@ -314,9 +351,103 @@ h2 {
 }
 
 
+/* SELECTED ANSWER */
+
+.answer.selected {
+
+    background: #292929;
+
+    border-color: #b51f1f;
+
+    box-shadow:
+        0 0 0 1px rgba(181, 31, 31, 0.25);
+}
+
+
+/* QUESTION NAVIGATION */
+
+.question-navigation {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.nav-button {
+
+    flex: 1;
+
+    min-height: 52px;
+
+    border: 1px solid #444;
+
+    background: #222;
+
+    color: #ddd;
+}
+
+
+.nav-button:hover:not(:disabled) {
+
+    background: #303030;
+
+    border-color: #666;
+
+    transform: translateY(-2px);
+}
+
+
+.back-button {
+
+    background: #171717;
+
+    color: #aaa;
+}
+
+
+.next-button {
+
+    background: #b51f1f;
+
+    border-color: #b51f1f;
+
+    color: white;
+}
+
+
+.next-button:hover:not(:disabled) {
+
+    background: #d32929;
+
+    border-color: #d32929;
+}
+
+
+.nav-button:disabled {
+
+    opacity: 0.4;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+.next-button.submit-button {
+
+    background: #b51f1f;
+
+    border-color: #b51f1f;
+}
+
+
 /* RESULTS */
 
 .result-label {
+
     text-align: center;
 
     color: #777;
@@ -326,13 +457,17 @@ h2 {
     letter-spacing: 3px;
 }
 
+
 #result-title {
+
     margin-top: 10px;
 
     font-size: clamp(30px, 7vw, 46px);
 }
 
+
 .result-score {
+
     text-align: center;
 
     margin: 20px 0;
@@ -342,7 +477,9 @@ h2 {
     font-weight: 800;
 }
 
+
 #result-description {
+
     max-width: 600px;
 
     margin: auto;
@@ -356,7 +493,9 @@ h2 {
     text-align: center;
 }
 
+
 .survival-box {
+
     margin: 30px 0;
 
     padding: 22px;
@@ -370,7 +509,9 @@ h2 {
     text-align: center;
 }
 
+
 .survival-box strong {
+
     display: block;
 
     margin-bottom: 8px;
@@ -384,10 +525,174 @@ h2 {
     font-size: 12px;
 }
 
+
 .survival-box span {
+
     font-size: 25px;
 
     font-weight: 700;
+}
+
+
+/* INFORMATION PAGES */
+
+.info-page {
+
+    max-width: 760px;
+
+    margin: 40px auto;
+}
+
+
+.info-page h1 {
+
+    text-align: center;
+}
+
+
+.info-page h2 {
+
+    margin-top: 35px;
+
+    margin-bottom: 12px;
+
+    font-size: 24px;
+}
+
+
+.info-page p {
+
+    color: #bbb;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.info-page a {
+
+    color: #d32929;
+
+    text-decoration: none;
+}
+
+
+.info-page a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* FOOTER */
+
+.site-footer {
+
+    width: 100%;
+
+    max-width: 760px;
+
+    margin-top: 20px;
+
+    padding: 10px;
+
+    font-size: 12px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+}
+
+
+.site-footer a {
+
+    color: #777;
+
+    text-decoration: none;
+}
+
+
+.site-footer a:hover {
+
+    color: #ccc;
+
+    text-decoration: underline;
+}
+
+
+.copyright {
+
+    margin-top: 12px;
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+
+/* HOMEPAGE INFORMATION */
+
+.home-info {
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    background: rgba(12, 12, 12, 0.96);
+
+    border: 1px solid #3a3a3a;
+
+    border-radius: 18px;
+}
+
+
+.home-info h2 {
+
+    margin-top: 0;
+
+    font-size: 26px;
+}
+
+
+.home-info p {
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+.home-info h3 {
+
+    margin-top: 28px;
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+
+    color: #ddd;
+}
+
+
+.home-info h3:first-of-type {
+
+    margin-top: 20px;
 }
 
 
@@ -396,131 +701,80 @@ h2 {
 @media (max-width: 600px) {
 
     body {
+
         padding: 10px;
     }
 
+
     .screen {
+
         padding: 30px 20px;
 
         border-radius: 14px;
     }
 
+
+    .intro-card {
+
+        padding: 30px 20px;
+
+        border-radius: 14px;
+    }
+
+
     .icon {
+
         font-size: 60px;
     }
 
+
     .subtitle {
+
         font-size: 16px;
     }
-     .quiz-header {
-    font-size: 11px;
-}
 
-h2 {
-    margin-top: 28px;
-    font-size: 23px;
-}
-    .answer {
-        padding: 17px 15px;
-        font-size: 15px
+
+    .quiz-header {
+
+        font-size: 11px;
     }
-    .site-footer {
-    width: 100%;
-    max-width: 760px;
 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 
-    gap: 18px;
+    h2 {
 
-    margin-top: 20px;
-    padding: 10px;
+        margin-top: 28px;
 
-    font-size: 12px;
-}
+        font-size: 23px;
+    }
 
-.site-footer a {
-    color: #777;
-    text-decoration: none;
-}
 
-.site-footer a:hover {
-    color: #ccc;
-    text-decoration: underline;
-}
-}
-/* INFORMATION PAGES */
+    .answer {
 
-.info-page {
-    max-width: 760px;
-    margin: 40px auto;
-}
+        padding: 17px 15px;
 
-.info-page h1 {
-    text-align: center;
-}
+        font-size: 15px;
+    }
 
-.info-page h2 {
-    margin-top: 35px;
-    margin-bottom: 12px;
-    font-size: 24px;
-}
 
-.info-page p {
-    color: #bbb;
-    font-size: 16px;
-    line-height: 1.7;
-}
+    .question-navigation {
 
-.info-page a {
-    color: #d32929;
-    text-decoration: none;
-}
+        gap: 8px;
 
-.info-page a:hover {
-    text-decoration: underline;
-}
-.footer-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 18px;
-}
+        margin-top: 20px;
+    }
 
-.copyright {
-    margin-top: 12px;
-    text-align: center;
-    color: #555;
-    font-size: 11px;
-}
-/* HOMEPAGE INFORMATION */
 
-.home-info {
-    margin-top: 30px;
-    padding: 30px;
-    background: rgba(12, 12, 12, 0.96);
-    border: 1px solid #3a3a3a;
-    border-radius: 18px;
-}
+    .nav-button {
 
-.home-info h2 {
-    margin-top: 0;
-    font-size: 26px;
-}
+        padding: 15px 10px;
 
-.home-info p {
-    color: #aaa;
-    font-size: 15px;
-    line-height: 1.7;
-}
-.home-info h3 {
-    margin-top: 28px;
-    margin-bottom: 8px;
-    font-size: 18px;
-    color: #ddd;
-}
+        font-size: 13px;
+    }
 
-.home-info h3:first-of-type {
-    margin-top: 20px;
+
+    .footer-links {
+
+        gap: 14px;
+    }
+
 }
