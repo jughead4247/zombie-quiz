@@ -1,5 +1,3 @@
-const homeInfo = document.getElementById("home-info");
-
 const questions = [
 
     // DAY 1 — THE OUTBREAK
