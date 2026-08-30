@@ -379,7 +379,7 @@ function selectAnswer(answerIndex) {
             currentQuestion++;
             showQuestion();
 
-        }, 180);
+        }, 150);
 
     } else {
 
