@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta property="og:title" content="Zombie Apocalypse Survival Quiz – How Long Would You Survive?">
-    <meta property="og:description" content="Test your survival skills and discover how long you would survive a zombie apocalypse.">
-    <meta property="og:url" content="https://apocalypsequizzes.com/zombie-quiz/">
-    <meta property="og:type" content="website">
-    <meta name="google-site-verification" content="-z8Fexw2y9TUWtrAM3K_f50z2CY7BKYupiK1vBDpUAg" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧟</text></svg>">
-    <script async 
-src="https://www.googletagmanager.com/gtag/js?id=G-YC3ERJSBST"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-YC3ERJSBST');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Zombie Apocalypse Survival Quiz – How Long Would You Survive?</title>
-    <meta name="description" content="Take the Zombie Apocalypse Survival Quiz and discover how long you would survive in a zombie outbreak. Test your survival skills and challenge your friends!">
-<link rel="canonical" href="https://apocalypsequizzes.com/zombie-quiz/">
-<meta name="keywords" content="zombie apocalypse quiz, zombie survival quiz, zombie quiz, apocalypse survival test">
-    <meta name="author" content="Zombie Apocalypse Survival Quiz">
 
-<meta name="robots" content="index, follow">
+    <meta name="description"
+        content="Take the Zombie Apocalypse Survival Quiz and discover how long you would survive in a fictional zombie outbreak. Make difficult decisions and test your survival instincts.">
 
-<meta property="og:site_name" content="Zombie Apocalypse Survival Quiz">
+    <meta name="keywords"
+        content="zombie apocalypse quiz, zombie survival quiz, zombie quiz, apocalypse survival test">
 
-<meta property="og:locale" content="en_US">
+    <meta name="author" content="Apocalypse Quizzes">
+    <meta name="robots" content="index, follow">
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zombie Apocalypse Survival Quiz – How Long Would You Survive?">
-<meta name="twitter:description" content="Test your survival skills, make difficult choices, and discover how long you would survive a zombie apocalypse.">
-   
+    <link rel="canonical"
+        href="https://apocalypsequizzes.com/zombie-quiz/">
+
+    <meta name="google-site-verification"
+        content="-z8Fexw2y9TUWtrAM3K_f50z2CY7BKYupiK1vBDpUAg">
+
+    <meta property="og:title"
+        content="Zombie Apocalypse Survival Quiz – How Long Would You Survive?">
+
+    <meta property="og:description"
+        content="Test your survival skills, make difficult choices, and discover how long you would survive a fictional zombie apocalypse.">
+
+    <meta property="og:url"
+        content="https://apocalypsequizzes.com/zombie-quiz/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Apocalypse Quizzes">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title"
+        content="Zombie Apocalypse Survival Quiz – How Long Would You Survive?">
+
+    <meta name="twitter:description"
+        content="Test your survival skills, make difficult choices, and discover how long you would survive a fictional zombie apocalypse.">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧟</text></svg>">
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics -->
+    <script async
+        src="https://www.googletagmanager.com/gtag/js?id=G-YC3ERJSBST">
+    </script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-YC3ERJSBST');
+    </script>
+
 </head>
 
 <body>
@@ -43,41 +70,58 @@ src="https://www.googletagmanager.com/gtag/js?id=G-YC3ERJSBST"></script>
     <main class="container">
 
         <!-- START SCREEN -->
+
         <section id="start-screen">
 
-    <div class="intro-card">
+            <div class="intro-card">
 
-        <img src="zombie-apocalypse.png"
-     alt="Zombie Apocalypse Survival Quiz"
-     class="quiz-start-image">
+                <img
+                    src="zombie-apocalypse.png"
+                    alt="Zombie Apocalypse Survival Quiz"
+                    class="quiz-start-image">
 
-        <div class="intro-icon">
-            ☢️
-        </div>
+                <div class="intro-icon">
+                    ☢️
+                </div>
 
-            <h1>HOW LONG WOULD YOU SURVIVE?</h1>
+                <h1>
+                    HOW LONG WOULD YOU SURVIVE?
+                </h1>
 
-            <p class="subtitle">
-                The outbreak has begun. Every decision matters.
-                Make your choices and discover how long you would survive.
-            </p>
+                <p class="subtitle">
+                    The outbreak has begun. Every decision matters.
+                    Make your choices and discover how long you would survive.
+                </p>
 
-            <div class="info">
-                <span>20 Questions</span>
-                <span>•</span>
-                <span>4 Possible Choices</span>
+                <div class="info">
+                    <span>20 Questions</span>
+                    <span>•</span>
+                    <span>4 Possible Choices</span>
+                </div>
+
+                <button id="start-btn">
+                    START QUIZ
+                </button>
+
             </div>
 
-            <button id="start-btn">START QUIZ</button>
         </section>
 
 
         <!-- QUIZ SCREEN -->
+
         <section id="quiz-screen" class="screen hidden">
 
             <div class="quiz-header">
-                <span id="question-number">Question 1 of 20</span>
-                <span id="score-display">Survival Test</span>
+
+                <span id="question-number">
+                    Question 1 of 20
+                </span>
+
+                <span id="score-display">
+                    Survival Test
+                </span>
+
             </div>
 
             <div class="progress">
@@ -88,15 +132,40 @@ src="https://www.googletagmanager.com/gtag/js?id=G-YC3ERJSBST"></script>
 
             <div id="answers"></div>
 
+            <!-- QUESTION NAVIGATION -->
+
+            <div class="question-navigation">
+
+                <button
+                    id="back-btn"
+                    class="nav-button back-button"
+                    type="button">
+                    ← BACK
+                </button>
+
+                <button
+                    id="next-btn"
+                    class="nav-button next-button"
+                    type="button">
+                    NEXT →
+                </button>
+
+            </div>
+
         </section>
 
 
         <!-- RESULT SCREEN -->
+
         <section id="result-screen" class="screen hidden">
 
-            <div id="result-icon" class="icon">☠️</div>
+            <div id="result-icon" class="icon">
+                ☠️
+            </div>
 
-            <p class="result-label">YOUR RESULT</p>
+            <p class="result-label">
+                YOUR RESULT
+            </p>
 
             <h1 id="result-title"></h1>
 
@@ -107,110 +176,144 @@ src="https://www.googletagmanager.com/gtag/js?id=G-YC3ERJSBST"></script>
             <p id="result-description"></p>
 
             <div class="survival-box">
-                <strong>Estimated Survival</strong>
+
+                <strong>
+                    Estimated Survival
+                </strong>
+
                 <span id="survival-time"></span>
+
             </div>
 
-            <button id="restart-btn">TRY AGAIN</button>
-            <button id="share-btn">📤 SHARE MY RESULT</button>
-            <button id="challenge-btn">🧟 CHALLENGE YOUR FRIENDS</button>
-        </section>
-        
-      <!-- HOMEPAGE INFORMATION -->
+            <button id="restart-btn">
+                TRY AGAIN
+            </button>
 
-<div id="home-info">
+            <button id="share-btn">
+                📤 SHARE MY RESULT
+            </button>
 
-    <section class="home-info">
-
-            <h2>About the Zombie Apocalypse Survival Quiz</h2>
-
-            <p>
-                Think you could survive a zombie apocalypse? Put your
-                decision-making skills to the test in this fictional
-                survival quiz.
-            </p>
-
-            <p>
-                You'll face 20 situations covering food, water, shelter,
-                resources, other survivors, and dangerous encounters.
-                Every choice affects your final score.
-            </p>
-
-            <p>
-                Your score ranges from 0 to 100 and determines your
-                fictional survival ranking, from Zombie Food to The Last
-                Human Alive.
-            </p>
+            <button id="challenge-btn">
+                🧟 CHALLENGE YOUR FRIENDS
+            </button>
 
         </section>
-        <section class="home-info">
 
-    <h2>Frequently Asked Questions</h2>
 
-    <h3>How does the Zombie Survival Quiz work?</h3>
+        <!-- HOMEPAGE INFORMATION -->
 
-    <p>
-        You will face 20 fictional zombie-apocalypse situations. Each
-        situation gives you four choices, and every choice awards a
-        different number of points. Your decisions determine your final
-        survival score.
-    </p>
+        <div id="home-info">
 
-    <h3>What is the maximum score?</h3>
+            <section class="home-info">
 
-    <p>
-        The maximum possible score is 100 points. Your final score
-        determines which survival category you receive.
-    </p>
+                <h2>
+                    About the Zombie Apocalypse Survival Quiz
+                </h2>
 
-    <h3>What does my survival score mean?</h3>
+                <p>
+                    Think you could survive a zombie apocalypse?
+                    Put your decision-making skills to the test in this
+                    fictional survival quiz.
+                </p>
 
-    <p>
-        Your result is a fictional estimate based on the choices you made.
-        Scores range from Zombie Food at the lower end to The Last Human
-        Alive at the highest level.
-    </p>
+                <p>
+                    You'll face 20 situations covering food, water,
+                    shelter, resources, other survivors, and dangerous
+                    encounters. Every choice affects your final score.
+                </p>
 
-    <h3>Is this a real survival test?</h3>
+                <p>
+                    Your score ranges from 0 to 100 and determines your
+                    fictional survival ranking, from Zombie Food to
+                    The Last Human Alive.
+                </p>
 
-    <p>
-        No. The quiz is designed for entertainment and does not predict
-        how someone would actually perform during a disaster or zombie
-        outbreak.
-    </p>
+            </section>
 
-    <h3>Can I take the quiz again?</h3>
 
-    <p>
-        Yes. Select TRY AGAIN after receiving your result and you can
-        replay the quiz and try different decisions.
-    </p>
+            <section class="home-info">
 
-    <h3>Can I challenge my friends?</h3>
+                <h2>
+                    Frequently Asked Questions
+                </h2>
 
-    <p>
-        Yes. After completing the quiz, use the Challenge Your Friends
-        button to share your result and invite your friends to see if
-        they can beat your score.
-    </p>
+                <h3>
+                    How does the Zombie Survival Quiz work?
+                </h3>
 
-</section>
-</div>  
+                <p>
+                    You will face 20 fictional zombie-apocalypse situations.
+                    Each situation gives you four choices, and every choice
+                    awards a different number of points. Your decisions
+                    determine your final survival score.
+                </p>
+
+                <h3>
+                    What is the maximum score?
+                </h3>
+
+                <p>
+                    The maximum possible score is 100 points. Your final score
+                    determines which survival category you receive.
+                </p>
+
+                <h3>
+                    What does my survival score mean?
+                </h3>
+
+                <p>
+                    Your result is a fictional estimate based on the choices
+                    you made. Scores range from Zombie Food at the lower end
+                    to The Last Human Alive at the highest level.
+                </p>
+
+                <h3>
+                    Is this a real survival test?
+                </h3>
+
+                <p>
+                    No. The quiz is designed for entertainment and does not
+                    predict how someone would actually perform during a
+                    disaster or zombie outbreak.
+                </p>
+
+                <h3>
+                    Can I take the quiz again?
+                </h3>
+
+                <p>
+                    Yes. Select TRY AGAIN after receiving your result and you
+                    can replay the quiz and try different decisions.
+                </p>
+
+                <h3>
+                    Can I challenge my friends?
+                </h3>
+
+                <p>
+                    Yes. After completing the quiz, use the Challenge Your
+                    Friends button to share your result and invite your
+                    friends to see if they can beat your score.
+                </p>
+
+            </section>
+
+        </div>
+
     </main>
+
+
+    <!-- FOOTER -->
 
     <footer class="site-footer">
 
         <div class="footer-links">
 
             <a href="/">Home</a>
-
-                <a href="/about.html">About</a>
-
-                <a href="/privacy.html">Privacy Policy</a>
-
-                <a href="/disclaimer.html">Disclaimer</a>
-
-                <a href="/contact.html">Contact</a>
+            <a href="/about.html">About</a>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/disclaimer.html">Disclaimer</a>
+            <a href="/contact.html">Contact</a>
 
         </div>
 
@@ -219,6 +322,7 @@ src="https://www.googletagmanager.com/gtag/js?id=G-YC3ERJSBST"></script>
         </div>
 
     </footer>
+
 
     <script src="script.js"></script>
 
