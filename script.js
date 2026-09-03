@@ -708,6 +708,3 @@ if (menuToggle && siteMenu) {
     });
 
 }
-    );
-}
-
