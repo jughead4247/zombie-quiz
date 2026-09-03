@@ -625,3 +625,79 @@ async function shareResult() {
 
     }
 }
+
+// ===============================
+// GLOBAL SITE MENU
+// ===============================
+const menuToggle =
+    document.getElementById("menu-toggle");
+const siteMenu =
+    document.getElementById("site-menu");
+if (menuToggle && siteMenu) {
+    menuToggle.addEventListener(
+        "click",
+        function () {
+            const isOpen =
+                menuToggle.getAttribute(
+                    "aria-expanded"
+                ) === "true";
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(!isOpen)
+            );
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Open navigation"
+                    : "Close navigation"
+            );
+            siteMenu.hidden =
+                isOpen;
+        }
+    );
+    siteMenu.querySelectorAll("a").forEach(
+        function (link) {
+            link.addEventListener(
+                "click",
+                function () {
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Open navigation"
+                    );
+                    siteMenu.hidden =
+                        true;
+                }
+            );
+        }
+    );
+    document.addEventListener(
+        "click",
+        function (event) {
+            const clickedInsideMenu =
+                siteMenu.contains(event.target);
+            const clickedToggle =
+                menuToggle.contains(event.target);
+            if (
+                !clickedInsideMenu &&
+                !clickedToggle &&
+                !siteMenu.hidden
+            ) {
+                siteMenu.hidden =
+                    true;
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation"
+                );
+            }
+        }
+    );
+}
+
