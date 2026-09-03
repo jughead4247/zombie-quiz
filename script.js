@@ -629,75 +629,85 @@ async function shareResult() {
 // ===============================
 // GLOBAL SITE MENU
 // ===============================
-const menuToggle =
-    document.getElementById("menu-toggle");
-const siteMenu =
-    document.getElementById("site-menu");
+
+const menuToggle = document.getElementById("menu-toggle");
+const siteMenu = document.getElementById("site-menu");
+
 if (menuToggle && siteMenu) {
-    menuToggle.addEventListener(
-        "click",
-        function () {
-            const isOpen =
-                menuToggle.getAttribute(
-                    "aria-expanded"
-                ) === "true";
+
+    // OPEN / CLOSE WITH HAMBURGER
+    menuToggle.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        const isOpen =
+            menuToggle.getAttribute("aria-expanded") === "true";
+
+        siteMenu.hidden = isOpen;
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(!isOpen)
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Open navigation"
+                : "Close navigation"
+        );
+
+    });
+
+
+    // CLOSE WHEN CLICKING OUTSIDE
+    document.addEventListener("click", function (event) {
+
+        if (
+            !siteMenu.hidden &&
+            !siteMenu.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
+
+            siteMenu.hidden = true;
+
             menuToggle.setAttribute(
                 "aria-expanded",
-                String(!isOpen)
+                "false"
             );
+
             menuToggle.setAttribute(
                 "aria-label",
-                isOpen
-                    ? "Open navigation"
-                    : "Close navigation"
+                "Open navigation"
             );
-            siteMenu.hidden =
-                isOpen;
+
         }
-    );
-    siteMenu.querySelectorAll("a").forEach(
-        function (link) {
-            link.addEventListener(
-                "click",
-                function () {
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        "Open navigation"
-                    );
-                    siteMenu.hidden =
-                        true;
-                }
+
+    });
+
+
+    // CLOSE AFTER CLICKING A MENU LINK
+    siteMenu.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            siteMenu.hidden = true;
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
             );
-        }
-    );
-    document.addEventListener(
-        "click",
-        function (event) {
-            const clickedInsideMenu =
-                siteMenu.contains(event.target);
-            const clickedToggle =
-                menuToggle.contains(event.target);
-            if (
-                !clickedInsideMenu &&
-                !clickedToggle &&
-                !siteMenu.hidden
-            ) {
-                siteMenu.hidden =
-                    true;
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation"
-                );
-            }
-        }
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation"
+            );
+
+        });
+
+    });
+
+}
     );
 }
 
