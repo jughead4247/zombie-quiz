@@ -906,11 +906,25 @@ h2 {
     font-size: 0.8rem;
 }
 
-/* HOMEPAGE INFORMATION */
+/* ===============================
+   HOMEPAGE INFORMATION
+   =============================== */
+
+#home-info {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
 
 .home-info {
 
-    margin-top: 30px;
+    margin-top: 0;
 
     padding: 30px;
 
@@ -927,6 +941,8 @@ h2 {
     margin-top: 0;
 
     font-size: 26px;
+
+    line-height: 1.25;
 }
 
 
@@ -949,6 +965,8 @@ h2 {
     font-size: 18px;
 
     color: #ddd;
+
+    line-height: 1.35;
 }
 
 
@@ -958,65 +976,28 @@ h2 {
 }
 
 
-/* MOBILE */
+/* ===============================
+   MOBILE INFORMATION CARDS
+   =============================== */
 
 @media (max-width: 600px) {
 
-    body {
+    #home-info {
 
-        padding: 10px;
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 25px;
     }
 
 
-    .screen {
+    .home-info {
 
-        padding: 30px 20px;
-
-        border-radius: 14px;
+        padding: 25px 20px;
     }
 
-
-    .intro-card {
-
-        padding: 30px 20px;
-
-        border-radius: 14px;
-    }
-
-
-    .icon {
-
-        font-size: 60px;
-    }
-
-
-    .subtitle {
-
-        font-size: 16px;
-    }
-
-
-    .quiz-header {
-
-        font-size: 11px;
-    }
-
-
-    h2 {
-
-        margin-top: 28px;
-
-        font-size: 23px;
-    }
-
-
-    .answer {
-
-        padding: 17px 15px;
-
-        font-size: 15px;
-    }
-
+}
 
     /* MOBILE NAVIGATION */
 
